@@ -1,20 +1,21 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 class Solution {
 public:
     int titleToNumber(string columnTitle) {
-        int resultado = 0;
+        int result = 0;
 
-        for(char c : columnTitle){
-            resultado = resultado * 26 + (c - 'A' + 1);
+        for (char c : columnTitle) {
+            result = result * 26 + (c - 'A' + 1);
         }
 
-        return resultado;
+        return result;
     }
 };
 
-int main(){
+int main() {
     Solution sol;
     cout << sol.titleToNumber("A") << endl;
     cout << sol.titleToNumber("AB") << endl;
